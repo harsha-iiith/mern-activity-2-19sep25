@@ -1,12 +1,46 @@
-# React + Vite
+# Notes App Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application for managing notes with full CRUD operations.
 
-Currently, two official plugins are available:
+## What I Built
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a clean, minimal notes app that lets you:
 
-## Expanding the ESLint configuration
+- Create new notes with title and content
+- View all your notes in a nice grid layout  
+- Edit existing notes by clicking the edit button
+- Delete notes with a confirmation prompt
+- Real-time updates - everything syncs with the backend instantly
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React 19 with hooks for state management
+- Vite for fast development and building
+- Axios for API calls to the backend
+- CSS Grid for responsive layout
+- Express backend with MongoDB (CORS enabled)
+
+## How to Run
+
+1. Start the backend first:
+   ```bash
+   cd ../backend
+   npm start
+   ```
+
+2. Then start the frontend:
+   ```bash
+   npm run dev
+   ```
+
+3. Open your browser: http://localhost:5173
+
+## Features
+
+- Form validation - Won't let you create empty notes
+- Loading states - Shows feedback while saving/loading
+- Error handling - Displays helpful error messages
+- Responsive design - Works on mobile and desktop
+- Clean UI - Simple, easy-to-use interface
+
+The app connects to the backend at http://localhost:5001 and handles all the API communication automatically. Just start both servers and you're good to go!
